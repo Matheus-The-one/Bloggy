@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import ThemesSwitch from './ThemesSwitch'
 
 const NavBar = () => {
   return (
@@ -8,7 +9,7 @@ const NavBar = () => {
             <Link href={'/'}>
                 <div>Bloggy</div>
             </Link>
-            <div>Theme</div>
+            <ThemesSwitch />
         </div>
     </div>
   )
