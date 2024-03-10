@@ -3,6 +3,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { MoonIcon, SunIcon } from './Icons'
 
 const ThemesSwitch = () => {
     const {theme,setTheme}=useTheme()
@@ -22,7 +23,7 @@ const ThemesSwitch = () => {
 
 
   return (
-   <button onClick={()=>setTheme(theme==='dark'?'light':'dark')}> {theme==='dark'?'light':'dark'}   </button> 
+   <button onClick={()=>setTheme(theme==='dark'?'light':'dark')}> {theme==='dark'?<SunIcon /> :<MoonIcon />}   </button> 
   )
 }
 
