@@ -5,7 +5,6 @@ import NavBar from "../components/NavBar";
 
 import { Provider } from "../utils/Provider";
 
-// const inter = Inter({ subsets: ["latin"] });
 const firaCode=Fira_Code({subsets:["latin"]})
 
 export const metadata: Metadata = {
