@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
 import Header from "../components/Header";
+import PostComponent from "../components/PostComponent";
+import { Post } from "../utils/interface";
 
 
 
@@ -25,14 +27,17 @@ async function getPosts() {
 
 
 
-export default function Home() {
+export default async function Home() {
+  const posts: Post[] = await getPosts();
+  console.log(posts, "posts");
+
   return (
-   <>
-    <Header title="Articles" tags />
-   
-
-
-
-   </>
+    <div>
+      <Header title="Articles" tags />
+      <div>
+        {posts?.length > 0 &&
+          posts?.map((post) => <PostComponent key={post?._id} post={post} />)}
+      </div>
+    </div>
   );
 }
