@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { client } from "@/sanity/lib/client";
+import Header from "../components/Header";
 
 
 
@@ -27,9 +28,7 @@ async function getPosts() {
 export default function Home() {
   return (
    <>
-   <div>
-    hello world
-   </div>
+    <Header title="Articles" tags />
    
 
 
